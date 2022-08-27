@@ -10,6 +10,8 @@ module.exports = (req, res, next) => {
       return res.status(401).send("Token is invalid or expired.");
     }
     req.uid = decoded.id;
+    req.biz = decoded.biz;
+    req.admin = !!decoded.admin;
     next();
   } catch (ex) {
     res.status(400).send("Invalid token.");

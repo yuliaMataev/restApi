@@ -1,0 +1,459 @@
+{
+	"info": {
+		"_postman_id": "64064e7f-b70a-45e4-9efc-a1b396efad5c",
+		"name": "RestAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/user/create (part 4)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \r\n    \"email\":\"yulia@gmail.com\",\r\n    \"password\":\"123456\"\r\n   \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/user/auth",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/user/auth (part 5)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \r\n    \"email\":\"yulia@gmail.com\",\r\n    \"password\":\"123456\"\r\n   \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/user/auth",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/user/decryptToken (TBD)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"token\":\"decryptToken\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/user/decryptToken",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"decryptToken"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/user/show (part 6)",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyZjdkYWM3NmU3MjFkYTkwMDliN2FjZCIsImJpeiI6dHJ1ZSwiaWF0IjoxNjYxNjE1NzM5fQ.U_93sxdwAAZ4cFNBlCzZmdeJVAPsymz4Fy3SrQbBPfE",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"bizName\":\"Koshka1\",\r\n    \"bizDescription\": \"Miau\",\r\n    \"bizAddress\": \"Garden\",\r\n    \"bizPhone\": \"1234567890123\",\r\n    \"bizImage\":\"https://www.planetware.com/wpimages/2020/02/france-in-pictures-beautiful-places-to-photograph-eiffel-tower.jpg\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/card/show",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"card",
+						"show"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/user/me (part 6, take II)",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyZjdkYWM3NmU3MjFkYTkwMDliN2FjZCIsImJpeiI6dHJ1ZSwiaWF0IjoxNjYxNjE1NzM5fQ.U_93sxdwAAZ4cFNBlCzZmdeJVAPsymz4Fy3SrQbBPfE",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"bizName\":\"Koshka1\",\r\n    \"bizDescription\": \"Miau\",\r\n    \"bizAddress\": \"Garden\",\r\n    \"bizPhone\": \"1234567890123\",\r\n    \"bizImage\":\"https://www.planetware.com/wpimages/2020/02/france-in-pictures-beautiful-places-to-photograph-eiffel-tower.jpg\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/card/show",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"card",
+						"show"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/card/showAll (part 7)",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyZjdkYWM3NmU3MjFkYTkwMDliN2FjZCIsImJpeiI6dHJ1ZSwiaWF0IjoxNjYxNjE1NzM5fQ.U_93sxdwAAZ4cFNBlCzZmdeJVAPsymz4Fy3SrQbBPfE",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"bizName\":\"Koshka1\",\r\n    \"bizDescription\": \"Miau\",\r\n    \"bizAddress\": \"Garden\",\r\n    \"bizPhone\": \"1234567890123\",\r\n    \"bizImage\":\"https://www.planetware.com/wpimages/2020/02/france-in-pictures-beautiful-places-to-photograph-eiffel-tower.jpg\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/card/show",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"card",
+						"show"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/card/show/<cardID> (part 8)",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyZjdkYWM3NmU3MjFkYTkwMDliN2FjZCIsImJpeiI6dHJ1ZSwiaWF0IjoxNjYxNjE1NzM5fQ.U_93sxdwAAZ4cFNBlCzZmdeJVAPsymz4Fy3SrQbBPfE",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"bizName\":\"Koshka1\",\r\n    \"bizDescription\": \"Miau\",\r\n    \"bizAddress\": \"Garden\",\r\n    \"bizPhone\": \"1234567890123\",\r\n    \"bizImage\":\"https://www.planetware.com/wpimages/2020/02/france-in-pictures-beautiful-places-to-photograph-eiffel-tower.jpg\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/card/show/630a5a31b68b5477bf3f5487",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"card",
+						"show",
+						"630a5a31b68b5477bf3f5487"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/card/showAllMyCards (part 9)",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyZjdkYWM3NmU3MjFkYTkwMDliN2FjZCIsImJpeiI6dHJ1ZSwiaWF0IjoxNjYxNjE1NzM5fQ.U_93sxdwAAZ4cFNBlCzZmdeJVAPsymz4Fy3SrQbBPfE",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"bizName\":\"Koshka1\",\r\n    \"bizDescription\": \"Miau\",\r\n    \"bizAddress\": \"Garden\",\r\n    \"bizPhone\": \"1234567890123\",\r\n    \"bizImage\":\"https://www.planetware.com/wpimages/2020/02/france-in-pictures-beautiful-places-to-photograph-eiffel-tower.jpg\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/card/show",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"card",
+						"show"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/card/createCard (part 10)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyZjdkYWM3NmU3MjFkYTkwMDliN2FjZCIsImJpeiI6dHJ1ZSwiaWF0IjoxNjYxNjE1NzM5fQ.U_93sxdwAAZ4cFNBlCzZmdeJVAPsymz4Fy3SrQbBPfE",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"bizName\":\"Koshka1\",\r\n    \"bizDescription\": \"Miau\",\r\n    \"bizAddress\": \"Garden\",\r\n    \"bizPhone\": \"1234567890123\",\r\n    \"bizImage\":\"https://www.planetware.com/wpimages/2020/02/france-in-pictures-beautiful-places-to-photograph-eiffel-tower.jpg\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/card/createCard",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"card",
+						"createCard"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/card/update/<cardID> (part 11)",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyZjdkYWM3NmU3MjFkYTkwMDliN2FjZCIsImJpeiI6dHJ1ZSwiaWF0IjoxNjYxNjE2NjI2fQ.psgws0CDF1glbhApQG7SoZFVIBxFLtvLNBsj0onpZ8c",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"bizName\":\"Koshka1x\",\r\n    \"bizDescription\": \"Miau\",\r\n    \"bizAddress\": \"Garden\",\r\n    \"bizPhone\": \"1234567890123\",\r\n    \"bizImage\":\"https://www.planetware.com/wpimages/2020/02/france-in-pictures-beautiful-places-to-photograph-eiffel-tower.jpg\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/card/update/6303d74de91593438a0502f5",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"card",
+						"update",
+						"6303d74de91593438a0502f5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/card/delete/<cardID> (part 12)",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyZjdkYWM3NmU3MjFkYTkwMDliN2FjZCIsImJpeiI6dHJ1ZSwiaWF0IjoxNjYxNjE1NzM5fQ.U_93sxdwAAZ4cFNBlCzZmdeJVAPsymz4Fy3SrQbBPfE",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/card/delete/6303d74de91593438a0502f5",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"card",
+						"delete",
+						"6303d74de91593438a0502f5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/card/likes/<id> (part 13)",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyZjdkYWM3NmU3MjFkYTkwMDliN2FjZCIsImJpeiI6dHJ1ZSwiaWF0IjoxNjYxNjE1NzM5fQ.U_93sxdwAAZ4cFNBlCzZmdeJVAPsymz4Fy3SrQbBPfE",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    likes: [1,2,3]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/card/likes/2123243",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"card",
+						"likes",
+						"2123243"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/card/getAllBizCards/<userId> (extra)",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyZjdkYWM3NmU3MjFkYTkwMDliN2FjZCIsImJpeiI6dHJ1ZSwiaWF0IjoxNjYxNjE1NzM5fQ.U_93sxdwAAZ4cFNBlCzZmdeJVAPsymz4Fy3SrQbBPfE",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"bizName\":\"Koshka1\",\r\n    \"bizDescription\": \"Miau\",\r\n    \"bizAddress\": \"Garden\",\r\n    \"bizPhone\": \"1234567890123\",\r\n    \"bizImage\":\"https://www.planetware.com/wpimages/2020/02/france-in-pictures-beautiful-places-to-photograph-eiffel-tower.jpg\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/card/getAllBizCards/62f7dac76e721da9009b7acd",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"card",
+						"getAllBizCards",
+						"62f7dac76e721da9009b7acd"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
